@@ -1,13 +1,9 @@
-import Banner from './components/Banner/Banner';
-import Form from './components/Form/Form';
+import Home from './pages/Home';
 
-function App() {
-  return (
-    <>
-      <Banner />
-      <Form />
-    </>
-  );
+const App = () => {
+	return (
+		<Home />
+	);
 }
 
 export default App;
