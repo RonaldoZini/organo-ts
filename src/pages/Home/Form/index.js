@@ -4,23 +4,17 @@ import Dropdown from '../../../components/Dropdown';
 import Input from '../../../components/Input';
 import './Form.css';
 
-const Form = () => {
-	const listTeam = [
-		'Frontend',
-		'Backend',
-		'Devops',
-		'UX',
-		'Mobile'
-	];
+const Form = (props) => {
+	const { teams } = props;
 
 	const onSave = (event) => {
 		event.preventDefault();
-		console.log(`Saving... 
-			Nome: ${name}
-			Cargo: ${role}
-			Imagem: ${image}
-			Time: ${team}
-		`);
+		props.onAddEmployee({
+			name,
+			role,
+			image,
+			team,
+		})
 	};
 
 	const [name, setName] = useState('');
@@ -56,7 +50,7 @@ const Form = () => {
 				<Dropdown
 					label="Time"
 					required={true}
-					itens={listTeam}
+					itens={teams}
 					onChange={value => setTeam(value)}
 				/>
 				<Button>Criar card</Button>
