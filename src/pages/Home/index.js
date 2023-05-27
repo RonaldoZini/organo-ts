@@ -23,7 +23,7 @@ const Home = () => {
 		<>
 			<Banner />
 			<Form onAddEmployee={value => onAddEmployee(value)} teams={teams} />
-			{teams.map(team => <Team name={team} />)}
+			{teams.map(team => <Team key={team} name={team} />)}
 		</>
 	)
 }
