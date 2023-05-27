@@ -1,10 +1,11 @@
+import { useState } from 'react';
 import Button from '../Button/Button';
 import Dropdown from '../Dropdown/Dropdown';
 import Input from '../Input/Input';
 import './Form.css';
 
 const Form = () => {
-	const team = [
+	const listTeam = [
 		'Frontend',
 		'Backend',
 		'Devops',
@@ -14,17 +15,50 @@ const Form = () => {
 
 	const onSave = (event) => {
 		event.preventDefault();
-		console.log('saving...');
+		console.log(`Saving... 
+			Nome: ${name}
+			Cargo: ${role}
+			Imagem: ${image}
+			Time: ${team}
+		`);
 	};
+
+	const [name, setName] = useState('');
+	const [role, setRole] = useState('');
+	const [image, setImage] = useState('');
+	const [team, setTeam] = useState('');
 
 	return (
 		<section className='section-form'>
 			<form onSubmit={onSave}>
 				<h2>Preencha os dados para criar o card do colaborador</h2>
-				<Input label="Nome" placeholder="Digite seu nome" required={true} />
-				<Input label="Cargo" placeholder="Digite seu cargo" required={true} />
-				<Input label="Imagem" placeholder="Informe o endereço da imagem" required={true} />
-				<Dropdown label="Time" required={true} itens={team} />
+				<Input
+					value={name}
+					label="Nome"
+					placeholder="Digite seu nome"
+					required={true}
+					onChange={value => setName(value)}
+				/>
+				<Input
+					value={role}
+					label="Cargo"
+					placeholder="Digite seu cargo"
+					required={true}
+					onChange={value => setRole(value)}
+				/>
+				<Input
+					value={image}
+					label="Imagem"
+					placeholder="Informe o endereço da imagem"
+					required={true}
+					onChange={value => setImage(value)}
+				/>
+				<Dropdown
+					label="Time"
+					required={true}
+					itens={listTeam}
+					onChange={value => setTeam(value)}
+				/>
 				<Button>Criar card</Button>
 			</form>
 		</section>
