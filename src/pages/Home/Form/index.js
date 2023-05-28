@@ -6,6 +6,10 @@ import './Form.css';
 
 const Form = (props) => {
 	const { teamsName } = props;
+	const [name, setName] = useState('');
+	const [role, setRole] = useState('');
+	const [image, setImage] = useState('');
+	const [teamName, setTeamName] = useState(teamsName[0]);
 
 	const onSave = (event) => {
 		event.preventDefault();
@@ -14,13 +18,17 @@ const Form = (props) => {
 			role,
 			image,
 			teamName,
-		})
+		});
+
+		clearFields();
 	};
 
-	const [name, setName] = useState('');
-	const [role, setRole] = useState('');
-	const [image, setImage] = useState('');
-	const [teamName, setTeamName] = useState(teamsName[0]);
+	const clearFields = () => {
+		setName('');
+		setRole('');
+		setImage('');
+		setTeamName(teamsName[0]);
+	}
 
 	return (
 		<section className='section-form'>

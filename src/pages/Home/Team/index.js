@@ -6,7 +6,7 @@ const Team = (props) => {
 	const { name, colorPrimary, colorSecondary } = props.team;
 
 	return (
-		<section
+		props.employees.length > 0 && <section
 			className='team'
 			style={{ backgroundColor: colorSecondary }}>
 			<h3
