@@ -33,3 +33,14 @@ footer .developed label {
 	line-height: 24px;
 	color: #FFFFFF;
 }
+
+@media only screen and (max-width: 600px) {
+	footer .content {
+		justify-content: space-around;
+		flex-direction: column;
+	}
+
+	footer {
+		background-size: cover;
+	}
+}

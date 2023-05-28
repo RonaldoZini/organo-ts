@@ -28,3 +28,15 @@
 	height: 42px;
 	color: #FFFFFF;
 }
+
+@media only screen and (max-width: 600px) {
+	.my-organization {
+		justify-content: space-around;
+		flex-direction: column;
+		padding: 24px;
+	}
+
+	.add {
+		margin-top: 16px;
+	}
+}
