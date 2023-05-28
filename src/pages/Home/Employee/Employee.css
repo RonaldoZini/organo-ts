@@ -1,0 +1,53 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+	border-radius: 10px;
+	height: 272px;
+	width: 262px;
+	background: #FFFFFF;
+	margin: 12px;
+}
+
+.card .header {
+	height: 92px;
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+}
+
+.card .image {
+	height: 120px;
+	width: 120px;
+	border-radius: 100%;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 40px;
+}
+
+.card .body {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	justify-content: flex-end;
+	margin-bottom: 27px;
+}
+
+.card .body .name {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	color: #6278F7;
+	margin-bottom: 10px;
+}
+
+.card .body .role {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: #212121;
+}

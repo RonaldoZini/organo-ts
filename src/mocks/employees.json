@@ -1,0 +1,86 @@
+[
+	{
+		"name": "Jamie M. Espinosa",
+		"role": "Desenvolvedor Junior",
+		"image": "/images/avatar/fem_1.svg",
+		"teamName": "Frontend"
+	},
+	{
+		"name": "Harold M.Banks",
+		"role": "Desenvolvedor Pleno",
+		"image": "/images/avatar/masc_1.svg",
+		"teamName": "Frontend"
+	},
+	{
+		"name": "Nolan V.Berry",
+		"role": "Desenvolvedor Sênior",
+		"image": "/images/avatar/masc_2.svg",
+		"teamName": "Frontend"
+	},
+	{
+		"name": "Louis C.Cruce",
+		"role": "Desenvolvedor Especialista",
+		"image": "/images/avatar/fem_2.svg",
+		"teamName": "Backend"
+	},
+	{
+		"name": "Joshua C. Cantu",
+		"role": "Desenvolvedor Junior",
+		"image": "/images/avatar/masc_3.svg",
+		"teamName": "Backend"
+	},
+	{
+		"name": "Jonathan E.Smith",
+		"role": "Desenvolvedor Pleno",
+		"image": "/images/avatar/masc_4.svg",
+		"teamName": "Backend"
+	},
+	{
+		"name": "Adriene A.Jones",
+		"role": "Desenvolvedor Pleno",
+		"image": "/images/avatar/fem_3.svg",
+		"teamName": "Backend"
+	},
+	{
+		"name": "Steven A.Clarke",
+		"role": "Desenvolvedor Especialista",
+		"image": "/images/avatar/masc_5.svg",
+		"teamName": "Devops"
+	},
+	{
+		"name": "Michelle D. Williams",
+		"role": "Designer",
+		"image": "/images/avatar/fem_4.svg",
+		"teamName": "UX"
+	},
+	{
+		"name": "Julie M. Key",
+		"role": "Designer",
+		"image": "/images/avatar/fem_5.svg",
+		"teamName": "UX"
+	},
+	{
+		"name": "Jerry J. Sanchez",
+		"role": "Desenvolvedor Pleno",
+		"image": "/images/avatar/masc_6.svg",
+		"teamName": "Mobile"
+	},
+	{
+		"name": "Laurette L. Carden",
+		"role": "Desenvolvedor Pleno",
+		"image": "/images/avatar/fem_6.svg",
+		"teamName": "Mobile"
+	},
+	{
+		"name": "Don V. Ford",
+		"role": "Desenvolvedor Senior",
+		"image": "/images/avatar/masc_7.svg",
+		"teamName": "Mobile"
+	},
+	{
+		"name": "George T. Ballard",
+		"role": "Desenvolvedor Especialista",
+		"image": "/images/avatar/masc_8.svg",
+		"teamName": "Mobile"
+	}
+]

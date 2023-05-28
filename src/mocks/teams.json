@@ -1,0 +1,27 @@
+[
+	{
+		"name": "Frontend",
+		"colorPrimary": "#57C278",
+		"colorSecondary": "#00C86F26"
+	},
+	{
+		"name": "Backend",
+		"colorPrimary": "#82CFFA",
+		"colorSecondary": "#E8FFFF"
+	},
+	{
+		"name": "Devops",
+		"colorPrimary": "#A6D157",
+		"colorSecondary": "#E9FFE3"
+	},
+	{
+		"name": "UX",
+		"colorPrimary": "#E06B69",
+		"colorSecondary": "#F1616526"
+	},
+	{
+		"name": "Mobile",
+		"colorPrimary": "#FFBA05",
+		"colorSecondary": "#FFBA0526"
+	}
+]
