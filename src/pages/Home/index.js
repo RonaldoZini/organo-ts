@@ -5,15 +5,10 @@ import './Home.css';
 import Team from './Team';
 
 const Home = () => {
-	const teams = [
-		'Frontend',
-		'Backend',
-		'Devops',
-		'UX',
-		'Mobile'
-	];
-
-	const [employees, setEmployees] = useState([]);
+	const employeesMock = require('../../mocks/employees.json');
+	const teamsMock = require('../../mocks/teams.json');
+	const teamsName = teamsMock.map((team) => team.name);
+	const [employees, setEmployees] = useState(employeesMock);
 
 	const onAddEmployee = (employee) => {
 		setEmployees([...employees, employee]);
@@ -22,8 +17,15 @@ const Home = () => {
 	return (
 		<>
 			<Banner />
-			<Form onAddEmployee={value => onAddEmployee(value)} teams={teams} />
-			{teams.map(team => <Team key={team} name={team} />)}
+			<Form
+				onAddEmployee={value => onAddEmployee(value)}
+				teamsName={teamsName}
+			/>
+			{teamsMock.map(team => <Team
+				key={team.name}
+				team={team}
+				employees={employees.filter(employee => employee.teamName == team.name)}
+			/>)}
 		</>
 	)
 }

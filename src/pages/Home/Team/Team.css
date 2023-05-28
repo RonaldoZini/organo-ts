@@ -1,12 +1,25 @@
-.time {
+.team {
 	text-align: center;
-	padding: 32px;
+	padding: 36px;
 	background-color: #D9F7E9;
 }
 
-.time h3 {
-	font-size: 32px;
+.team h3 {
 	border-bottom: 4px solid #57C278;
 	display: inline-block;
 	padding-bottom: 8px;
+	font-family: 'Prata';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 43px;
+	color: #212121;
+	margin: 0;
+}
+
+.team .employees {
+	display: flex;
+	margin-top: 42px;
+	flex-wrap: wrap;
+	justify-content: center;
 }
