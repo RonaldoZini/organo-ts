@@ -11,3 +11,13 @@
 	padding: 36px 64px;
 	box-shadow: 8px 8px 16px rgba(0,0,0,0.08);
 }
+
+@media only screen and (max-width: 600px) {
+	.section-form {
+		margin: 24px 0;
+	}
+
+	.section-form form {
+		padding: 24px;
+	}
+}

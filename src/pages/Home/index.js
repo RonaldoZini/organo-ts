@@ -18,7 +18,6 @@ const Home = () => {
 	return (
 		<>
 			<Banner />
-
 			<RegisterEmployee teamsName={teamsName} onRegisterEmployee={value => onRegisterEmployee(value)} />
 			{teamsMock.map(team => <Team
 				key={team.name}
