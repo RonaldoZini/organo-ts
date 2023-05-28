@@ -13,7 +13,7 @@ const Team = (props) => {
 				style={{ borderColor: colorPrimary }}>
 				{name}
 			</h3>
-			<div class="employees">
+			<div className="employees">
 				{employees.map(employee => <Employee
 					key={employee.name}
 					employee={employee}

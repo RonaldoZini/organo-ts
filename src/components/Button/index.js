@@ -1,9 +1,10 @@
 import './Button.css';
 
 const Button = (props) => {
-	const { children } = props;
+	const { children, type } = props;
+
 	return (
-		<button>
+		<button className={type} onClick={(event) => props.onClick(event)}>
 			{children}
 		</button>
 	)

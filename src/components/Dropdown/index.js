@@ -1,7 +1,7 @@
 import './Dropdown.css';
 
 const Dropdown = (props) => {
-	const { label, required, itens } = props;
+	const { label, required, itens, value } = props;
 
 	const onChange = (event) => props.onChange(event.target.value);
 
@@ -10,7 +10,9 @@ const Dropdown = (props) => {
 			<label>{label}</label>
 			<select
 				onChange={onChange}
-				required={required}>
+				required={required}
+				value={value}>
+				<option></option>
 				{itens.map(item => <option key={item}>{item}</option>)}
 			</select>
 		</div>
