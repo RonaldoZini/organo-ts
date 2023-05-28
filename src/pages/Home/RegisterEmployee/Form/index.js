@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Button from '../../../components/Button';
-import Dropdown from '../../../components/Dropdown';
-import Input from '../../../components/Input';
+import Button from '../../../../components/Button';
+import Dropdown from '../../../../components/Dropdown';
+import Input from '../../../../components/Input';
 import './Form.css';
 
 const Form = (props) => {
@@ -9,16 +9,11 @@ const Form = (props) => {
 	const [name, setName] = useState('');
 	const [role, setRole] = useState('');
 	const [image, setImage] = useState('');
-	const [teamName, setTeamName] = useState(teamsName[0]);
+	const [teamName, setTeamName] = useState('');
 
 	const onSave = (event) => {
 		event.preventDefault();
-		props.onAddEmployee({
-			name,
-			role,
-			image,
-			teamName,
-		});
+		props.onSave({ name, role, image, teamName });
 
 		clearFields();
 	};
@@ -27,7 +22,7 @@ const Form = (props) => {
 		setName('');
 		setRole('');
 		setImage('');
-		setTeamName(teamsName[0]);
+		setTeamName('');
 	}
 
 	return (
@@ -59,6 +54,7 @@ const Form = (props) => {
 					label="Time"
 					required={true}
 					itens={teamsName}
+					value={teamName}
 					onChange={value => setTeamName(value)}
 				/>
 				<Button>Criar card</Button>

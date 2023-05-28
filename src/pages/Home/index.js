@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Banner from '../../components/Banner';
 import Footer from '../../components/Footer';
-import Form from './Form';
 import './Home.css';
+import RegisterEmployee from './RegisterEmployee';
 import Team from './Team';
 
 const Home = () => {
@@ -11,17 +11,15 @@ const Home = () => {
 	const teamsName = teamsMock.map((team) => team.name);
 	const [employees, setEmployees] = useState(employeesMock);
 
-	const onAddEmployee = (employee) => {
+	const onRegisterEmployee = (employee) => {
 		setEmployees([...employees, employee]);
 	}
 
 	return (
 		<>
 			<Banner />
-			<Form
-				onAddEmployee={value => onAddEmployee(value)}
-				teamsName={teamsName}
-			/>
+
+			<RegisterEmployee teamsName={teamsName} onRegisterEmployee={value => onRegisterEmployee(value)} />
 			{teamsMock.map(team => <Team
 				key={team.name}
 				team={team}
