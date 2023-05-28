@@ -23,6 +23,7 @@
 	overflow: hidden;
 	position: absolute;
 	margin-top: 40px;
+	background: #EFEFEF;
 }
 
 .card .body {

@@ -23,5 +23,10 @@
 		"name": "Mobile",
 		"colorPrimary": "#FFBA05",
 		"colorSecondary": "#FFBA0526"
+	},
+	{
+		"name": "Coordenador",
+		"colorPrimary": "#EE89EF",
+		"colorSecondary": "#EE89EF26"
 	}
 ]

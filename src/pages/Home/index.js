@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Banner from '../../components/Banner';
+import Footer from '../../components/Footer';
 import Form from './Form';
 import './Home.css';
 import Team from './Team';
@@ -26,6 +27,7 @@ const Home = () => {
 				team={team}
 				employees={employees.filter(employee => employee.teamName == team.name)}
 			/>)}
+			<Footer />
 		</>
 	)
 }
