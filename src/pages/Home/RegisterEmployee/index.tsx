@@ -1,11 +1,16 @@
 import { useState } from 'react';
 import Button from '../../../components/Button';
+import { IEmployee } from '../../../shared/interfaces/IEmployee';
 import Form from './Form';
 import './RegisterEmployee.css';
 
-const RegisterEmployee = (props) => {
-	const { teamsName } = props;
-	const [showForm, setShowForm] = useState(false);
+interface RegisterEmployeeProps {
+	teamsName: string[];
+	onRegisterEmployee: (employee: IEmployee) => any;
+}
+
+const RegisterEmployee = ({ teamsName, onRegisterEmployee }: RegisterEmployeeProps) => {
+	const [showForm, setShowForm] = useState<boolean>(false);
 
 	return (
 		<>
@@ -16,12 +21,12 @@ const RegisterEmployee = (props) => {
 				</div>
 				<div className='add'>
 					<Button type="rounded" onClick={() => setShowForm(!showForm)}>
-						<img src={ !showForm ? '/images/add.svg' : '/images/close.svg'} />
+						<img src={!showForm ? '/images/add.svg' : '/images/close.svg'} alt='icon-add-or-close' />
 					</Button>
 				</div>
 			</div>
 			{showForm && <Form
-				onSave={value => props.onRegisterEmployee(value)}
+				onSave={(value) => onRegisterEmployee(value)}
 				teamsName={teamsName}
 			/>}
 		</>

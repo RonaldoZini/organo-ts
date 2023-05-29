@@ -1,19 +1,24 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Button from '../../../../components/Button';
 import Dropdown from '../../../../components/Dropdown';
 import Input from '../../../../components/Input';
+import { IEmployee } from '../../../../shared/interfaces/IEmployee';
 import './Form.css';
 
-const Form = (props) => {
-	const { teamsName } = props;
-	const [name, setName] = useState('');
-	const [role, setRole] = useState('');
-	const [image, setImage] = useState('');
-	const [teamName, setTeamName] = useState('');
+interface FormProps {
+	teamsName: string[];
+	onSave: (employee: IEmployee) => void;
+}
 
-	const onSave = (event) => {
-		event.preventDefault();
-		props.onSave({ name, role, image, teamName });
+const Form = ({ teamsName, onSave }: FormProps) => {
+	const [name, setName] = useState<string>('');
+	const [role, setRole] = useState<string>('');
+	const [image, setImage] = useState<string>('');
+	const [teamName, setTeamName] = useState<string>('');
+
+	const onSaveForm = (event?: React.FormEvent<HTMLFormElement>) => {
+		event?.preventDefault();
+		onSave({ name, role, image, teamName });
 
 		clearFields();
 	};
@@ -27,7 +32,7 @@ const Form = (props) => {
 
 	return (
 		<section className='section-form'>
-			<form onSubmit={onSave}>
+			<form onSubmit={(event) => onSaveForm(event)}>
 				<h2>Preencha os dados para criar o card do colaborador</h2>
 				<Input
 					value={name}
@@ -58,7 +63,7 @@ const Form = (props) => {
 					onChange={value => setTeamName(value)}
 				/>
 				<Button
-					onClick={() => onSave}>
+					onClick={() => onSaveForm}>
 					Criar card
 				</Button>
 			</form>
