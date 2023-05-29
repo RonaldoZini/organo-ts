@@ -1,15 +1,19 @@
 import './Dropdown.css';
 
-const Dropdown = (props) => {
-	const { label, required, itens, value } = props;
+interface DropdownProps {
+	label: string;
+	required: boolean;
+	itens: string[];
+	value: string;
+	onChange: (value: string) => void;
+}
 
-	const onChange = (event) => props.onChange(event.target.value);
-
+const Dropdown = ({ label, required, itens, value, onChange }: DropdownProps) => {
 	return (
 		<div className='div-dropdown'>
 			<label>{label}</label>
 			<select
-				onChange={onChange}
+				onChange={(event) => onChange(event.target.value)}
 				required={required}
 				value={value}>
 				<option></option>

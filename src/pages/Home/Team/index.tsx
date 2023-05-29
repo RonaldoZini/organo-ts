@@ -1,12 +1,18 @@
+import { IEmployee } from '../../../shared/interfaces/IEmployee';
+import { ITeam } from '../../../shared/interfaces/ITeam';
 import Employee from '../Employee';
 import './Team.css';
 
-const Team = (props) => {
-	const { employees } = props;
-	const { name, colorPrimary, colorSecondary } = props.team;
+interface TeamProps {
+	employees: IEmployee[];
+	team: ITeam;
+}
+
+const Team = ({ employees, team }: TeamProps) => {
+	const { name, colorPrimary, colorSecondary } = team;
 
 	return (
-		props.employees.length > 0 && <section
+		employees.length > 0 ? <section
 			className='team'
 			style={{ backgroundColor: colorSecondary }}>
 			<h3
@@ -20,7 +26,7 @@ const Team = (props) => {
 					headerColor={colorPrimary}
 				/>)}
 			</div>
-		</section>
+		</section> : <></>
 	)
 }
 

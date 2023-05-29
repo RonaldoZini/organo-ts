@@ -1,14 +1,19 @@
+import { IEmployee } from '../../../shared/interfaces/IEmployee';
 import './Employee.css';
 
-const Employee = (props) => {
-	const { headerColor } = props;
-	const { name, role, image } = props.employee;
+interface EmployeeProps {
+	headerColor: string;
+	employee: IEmployee;
+}
+
+const Employee = ({ headerColor, employee }: EmployeeProps) => {
+	const { name, role, image } = employee;
 
 	return (
 		<div className='card'>
 			<div className='header' style={{ backgroundColor: headerColor }}></div>
 			<div className='image'>
-				{image && <img src={image} alt={`image-of-${name}`}></img>}
+				{image && <img src={image} alt={`avatar-${name}`}/>}
 			</div>
 			<div className='body'>
 				<label className='name'>{name}</label>
