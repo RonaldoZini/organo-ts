@@ -1,5 +1,6 @@
-# Project Organo - ReactJS Course - Alura
-This project has developed for course studie of React JS produced by Alura
+# Project Organo - React With TypeScript Course - Alura
+This project has been migrated of React JS for React TypeScript.
+Project in ReactJS: https://github.com/RonaldoZini/organe 
 
 # Setup
 1. For clone this project, open your terminal in the desired directory and execute:</br>
@@ -14,6 +15,6 @@ or with SSH</br>
 ```npm start```
 
 # Published on Vercel
-https://organe.vercel.app/
+https://organo-ts-coral.vercel.app/
 
 
