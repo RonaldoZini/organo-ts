@@ -13,7 +13,7 @@ const Employee = ({ headerColor, employee }: EmployeeProps) => {
 		<div className='card'>
 			<div className='header' style={{ backgroundColor: headerColor }}></div>
 			<div className='image'>
-				{image && <img src={image} alt={`avatar-${name}`}/>}
+				{image && <img src={image} alt={`avatar-${name}`} />}
 			</div>
 			<div className='body'>
 				<label className='name'>{name}</label>
